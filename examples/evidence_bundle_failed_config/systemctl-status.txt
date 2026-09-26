@@ -1,0 +1,4 @@
+● example-api.service - Example API fixture service
+     Loaded: loaded (/etc/systemd/system/example-api.service; enabled)
+     Active: failed (Result: exit-code) since 2026-08-18 20:00:00 UTC
+    Process: 4242 ExecStart=/usr/bin/python3 /opt/example-api/bin/example-api (code=exited, status=1/FAILURE)

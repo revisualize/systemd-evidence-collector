@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.2",
+  "collector_version": "0.11.0",
+  "collected_at_utc": "20260925T015333Z",
+  "unit": "example-api.service",
+  "journal_since": "-30 min",
+  "journal_until_utc": "2026-09-25 01:53:33 UTC",
+  "inputs": {
+    "health_url_supplied": false,
+    "health_target": "none",
+    "path_supplied": false,
+    "include_unit_verify": true
+  },
+  "dry_run": false,
+  "mode": "synthetic_fixture",
+  "fixture_evidence": {
+    "health_probe_simulated": true,
+    "path_metadata_simulated": false
+  },
+  "fixture_scenario": "failed_config",
+  "artifact_count": 10,
+  "collection_status": "complete_with_command_failures",
+  "collection_context": {
+    "euid": 0,
+    "journal_access": "not_applicable_fixture",
+    "systemd_version": "not_applicable_fixture"
+  },
+  "privacy": {
+    "output_mode": "0700",
+    "redaction_filter": "assignment_patterns_v2",
+    "redaction_scope": "narrow best-effort blanking of assignments whose name contains SECRET, TOKEN, PASSWORD, PASSWD, PASSPHRASE, API_KEY, APIKEY, PRIVATE_KEY, CLIENT_SECRET, BEARER, JWT or CREDENTIAL, plus user:password pairs inside URLs; the rest of a matched assignment line is blanked; this is not a secrets scanner",
+    "hostname_redaction_applied": false,
+    "hostname_may_be_present": true
+  }
+}

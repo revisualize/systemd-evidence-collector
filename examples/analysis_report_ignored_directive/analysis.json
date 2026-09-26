@@ -1,0 +1,75 @@
+{
+  "analysis_version": "0.11.0",
+  "facts": {
+    "ActiveState": "failed",
+    "DropInPaths": "",
+    "ExecMainCode": "2",
+    "ExecMainStatus": "9",
+    "FragmentPath": "/etc/systemd/system/example-api.service",
+    "Group": "example-api",
+    "Id": "example-api.service",
+    "LoadState": "loaded",
+    "MainPID": "0",
+    "NRestarts": "0",
+    "Restart": "no",
+    "RestartUSec": "100ms",
+    "Result": "signal",
+    "SubState": "failed",
+    "TimeoutStartUSec": "1min 30s",
+    "TimeoutStopUSec": "1min 30s",
+    "User": "example-api",
+    "WorkingDirectory": "/opt/example-api"
+  },
+  "observations": [
+    {
+      "evidence": [
+        "systemctl-show.txt",
+        "systemctl-status.txt"
+      ],
+      "id": "OBS-UNIT-FAILED",
+      "playbook_reference": "docs/review_guide.md#failed-unit",
+      "severity": "review",
+      "statement": "The unit is reported as failed in the captured state evidence. Review Result, ExecMain fields, and the bounded journal window before considering a recovery action."
+    },
+    {
+      "evidence": [
+        "unit-verify.txt",
+        "command-outcomes.tsv"
+      ],
+      "id": "OBS-UNIT-VERIFY-DIAGNOSTICS",
+      "playbook_reference": "docs/review_guide.md#configuration-signals",
+      "severity": "review",
+      "statement": "systemd-analyze verify produced diagnostic output (exit 0). Exit 0 with diagnostics does not mean the unit is clean; a directive named in the output may have been ignored."
+    },
+    {
+      "evidence": [
+        "unit-effective.txt",
+        "systemctl-show.txt",
+        "unit-verify.txt"
+      ],
+      "id": "OBS-RESTART-DECLARED-DIFFERS",
+      "playbook_reference": "docs/review_guide.md#configuration-signals",
+      "severity": "review",
+      "statement": "The captured unit text carries Restart=on-failuer, but the manager reports Restart=no. The declared restart policy may not be the one in effect; compare the unit text, drop-ins, and any verifier output before relying on automatic restart."
+    }
+  ],
+  "schema_version": "1.2",
+  "source_bundle": {
+    "collected_at_utc": "20260925T015333Z",
+    "manifest_valid": true,
+    "metadata_trusted": true,
+    "outcomes_valid": true,
+    "unit": "example-api.service"
+  },
+  "validation": {
+    "errors": [],
+    "evidence_incomplete": false,
+    "limitations": [
+      "health.txt was written by a command that exited 22. Read it as the output of a failed command rather than as a complete answer.",
+      "health.stderr was written by a command that exited 22. Read it as the output of a failed command rather than as a complete answer."
+    ],
+    "manifest_valid": true,
+    "outcomes_valid": true,
+    "status": "valid_with_limitations"
+  }
+}

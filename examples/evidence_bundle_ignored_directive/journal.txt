@@ -1,0 +1,2 @@
+2026-08-18T20:00:00+0000 labhost systemd[1]: example-api.service: Main process exited, code=killed, status=9/KILL
+2026-08-18T20:00:00+0000 labhost systemd[1]: example-api.service: Failed with result 'signal'.

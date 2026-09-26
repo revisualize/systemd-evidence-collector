@@ -1,0 +1,1 @@
+This report is generated from a supplied local evidence bundle. It did not run system commands, request network resources, or perform state changes.

@@ -1,0 +1,11 @@
+[Unit]
+Description=Example API fixture service
+
+[Service]
+Type=simple
+User=example-api
+Group=example-api
+WorkingDirectory=/opt/example-api
+EnvironmentFile=/etc/example-api/example-api.env
+ExecStart=/usr/bin/python3 /opt/example-api/bin/example-api
+Restart=on-failuer

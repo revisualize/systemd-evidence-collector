@@ -1,0 +1,10 @@
+artifact	command_class	status	exit_code	note
+systemctl-status.txt	systemctl_status	captured	0	synthetic fixture artifact
+systemctl-show.txt	systemctl_show	captured	0	synthetic fixture artifact
+unit-effective.txt	systemctl_cat	captured	0	synthetic fixture artifact
+journal.txt	journalctl_unit	captured	0	synthetic fixture artifact
+process.txt	process_metadata	captured	0	synthetic fixture artifact
+health.txt	health_check	captured	22	synthetic non-success health evidence
+health.stderr	health_check	captured	22	synthetic health stderr
+path-metadata.txt	path_metadata	skipped		fixture scenario has no path metadata request
+unit-verify.txt	unit_verify	captured	0	exit 0; 0 diagnostic line(s); exit 0 with diagnostics is not a clean result
