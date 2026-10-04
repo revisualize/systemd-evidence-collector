@@ -10,7 +10,6 @@ Safety boundary:
 from __future__ import annotations
 
 import argparse
-import csv
 import hashlib
 import json
 import re
@@ -891,8 +890,8 @@ def render_markdown(
         "",
         "## Scope",
         "",
-        f"| Field | Value |",
-        f"|---|---|",
+        "| Field | Value |",
+        "|---|---|",
         f"| **Unit** | `{identity('unit')}` |",
         f"| **Collected at (UTC)** | `{identity('collected_at_utc')}` |",
         f"| **Collector version** | `{identity('collector_version')}` |",

@@ -3,6 +3,24 @@
 Dates are UTC. Versions are the `COLLECTOR_VERSION` and `ANALYZER_VERSION`
 constants in the two tools; they move together.
 
+## Unreleased (2026-09-29)
+
+No version change. The analyzer's output is byte-identical to 0.11.0.
+
+### Changed
+
+- **`analyze_evidence_bundle.py`: removed an unused `import csv`, and dropped
+  the `f` prefix from two report lines that contain no placeholders.** Both
+  were reported by ruff, which now runs on every push in
+  `.github/workflows/python-lint.yml`.
+- **Eight more GitHub Actions workflows**, each with its own README badge:
+  `shellcheck`, `bash-compat`, `python-compat`, `python-lint`, `codeql`,
+  `markdown-lint`, `links`, and `content-policy`. `ci.yml` moves to Revision 9,
+  which adds a manual re-run trigger and changes nothing else.
+- **README:** states the collector's floor as Bash 4.2 or newer, the oldest
+  release `bash-compat` builds and tests. It previously said Bash 4, which
+  included 4.0 and 4.1, neither of which is tested.
+
 ## 0.11.0 (2026-09-26)
 
 The collector and the analyzer are byte-identical to 0.10.0.
