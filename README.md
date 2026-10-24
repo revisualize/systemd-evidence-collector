@@ -12,6 +12,8 @@
 [![content-policy](https://github.com/revisualize/systemd-evidence-collector/actions/workflows/content-policy.yml/badge.svg)](https://github.com/revisualize/systemd-evidence-collector/actions/workflows/content-policy.yml)
 [![license: all rights reserved](https://img.shields.io/badge/license-all%20rights%20reserved-lightgrey)](LICENSE)
 
+**Project page:** [revisualized.com/projects/systemd-evidence-collector](https://revisualized.com/projects/systemd-evidence-collector)
+
 Two tools for a failed systemd service. The collector captures a private
 evidence bundle. The analyzer reads that bundle and writes a human review
 report. Neither changes systemd or service state, and neither names a cause.
